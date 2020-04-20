@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap");
+@import url("latest-post.css");
+@import url("footer.css");
+
+/* Overall/Global */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    position: relative;
+}
+
+.logo {
+    font-size: 2em;
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+
+.logo:hover {
+    color: #0088a9;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+nav {
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 0 10px;
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+
+nav a:hover {
+    color: #0088a9;
+}
+
+/* Showcase */
+.showcase {
+    width: 100%;
+}
+
+.showcase-image {
+    background: url("../img/showcase-large.jpg") no-repeat 0;
+    background-size: cover;
+    height: 525px;
+}
+
+/* Grid post*/
+p {
+    transition: all 0.5s;
+    text-decoration: none;
+    color: #fff;
+}
+
+.post-card img {
+    width: 100%;
+    transition: all 0.5s; 
+}
+
+.main-section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin: 0 15px;
+}
+
+.post-card {
+    position: relative;
+    overflow: hidden;
+    max-height: 500px;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px #ccc;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    background: linear-gradient(to bottom, 
+    rgba(208,228,247,0.5) 0%,
+    rgba(115,177,231,0.5) 24%,
+    rgba(10,119,213,0.5) 50%,
+    rgba(83,159,225,0.5) 79%,
+    rgba(135,188,234,0.5) 100%);
+    transition: all .5s;
+}
+
+.post-info h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 2px
+}
+
+.post-info p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 2px;
+    margin-bottom: 2px
+}
+
+.post-info a {
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.5s;
+    text-decoration: none;
+    color: #fff;
+}
+
+.post-info p:hover {
+    text-decoration: underline;
+}
+
+.post-info .btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-weight: 400;
+}
+
+.post-info .btn:hover {
+    background: rgba(52, 152, 219, 1.0);
+    transition: all .5s;
+}
+
+/* Media Queries */
+@media (max-width: 812px) {
+
+    .main-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .showcase-image{
+        background: url("../img/showcase-small.jpg") no-repeat;
+        background-size: cover;
+        height: 300px;
+    }
+
+    .logo {
+       font-size: 1.5em; 
+    }
+
+    nav {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        align-items: flex-end;
+        background-color: white;
+        width: 100%;  
+    }
+
+    nav ul li {
+        padding-top: 5px;
+    }
+
+    .nav-toggle-label {
+        margin-right: 10px;
+    }
+
+    .top-line {
+        height: 2px;
+        width: 16px;
+        background-color: black;
+        color: black;
+        border-radius: 2px;
+    }
+
+    .middle-line {
+        height: 2px;
+        width: 16px;
+        background-color: black;
+        color: black;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border-radius: 2px;
+    }
+
+    .bottom-line {
+        height: 2px;
+        width: 16px;
+        background-color: black;
+        color: black;
+        border-radius: 2px;
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: block;
+    }
+    
+}

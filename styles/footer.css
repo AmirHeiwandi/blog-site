@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap");
+
+/* Footer */
+.footer-box {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 5px;
+    border-top: lightgray 0.75px solid;
+}
+
+.footer-box p {
+    color: black;
+}
